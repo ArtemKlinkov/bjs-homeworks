@@ -12,7 +12,7 @@ function averageMark(a, g, p) {
 	let geography = g;
 	let physics = p;
     
-	return (algebra + geography + physics) /3;
+	return (algebra + geography + physics) / 3;
 }
 
 function sayHello(userName) {
