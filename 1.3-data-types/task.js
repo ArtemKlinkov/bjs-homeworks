@@ -17,6 +17,10 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     }
     const parsedAmount = parseFloat(amount); 
 
+    if (new Date(date) == 'Invalid Date') {
+        return `Параметр <Дата окончания выплат> содержит неправильное значение <${date}>`;
+    }
+
     const S = parsedAmount - parsedСontribution;
     const P = (parsedPercent / 100) / 12;
     const n = (date.getFullYear() - new Date().getFullYear()) * 12;
