@@ -1,8 +1,10 @@
 //String.prototype.isPalindrome - для задачи №1
 
 String.prototype.isPalindrome = function isPalindrome() {
-
-    return this.replace(/\s/g, "").toLowerCase() === this.replace(/\s/g, "").toLowerCase().split("").reverse().join("");
+    const strRemovedWhiteSpaces = this.replace(/\s/g, "").toLowerCase();
+    const reverseArr = strRemovedWhiteSpaces.split("").reverse();
+    const reverseStr = reverseArr.join("");
+    return strRemovedWhiteSpaces === reverseStr;
 }
 
 function getAverageMark(marks) {
@@ -22,7 +24,7 @@ function getAverageMark(marks) {
 function checkBirthday(birthday) {
     // код для задачи №3 писать здесь
     const now = Date.now();
-    birthday = +new Date(birthday);
+    const parsedBirthday = +new Date(birthday);
     const diff = now - birthday;
     const age = diff / (100 * 60 * 60 * 24 * 365);
     debugger;
