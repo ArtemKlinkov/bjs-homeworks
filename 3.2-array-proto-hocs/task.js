@@ -24,7 +24,6 @@ function memorize(fn, limit) {
     const memory = [];
 
     return function () {
-        debugger;
         const foundElem = memory.find(element => compareArrays(element.args, arguments));
         if ( foundElem !== undefined) {
             return foundElem.result;
