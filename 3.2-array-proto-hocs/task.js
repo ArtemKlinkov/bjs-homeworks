@@ -16,7 +16,7 @@ function compareArrays(arr1, arr2) {
     const parsedArray1 = Array.from(arr1);
     const parsedArray2 = Array.from(arr2);
 
-    return parsedArray1.every((element, i) => element === parsedArray2[i]);
+    return parsedArray1.length === parsedArray2.length && parsedArray1.every((element, i) => element === parsedArray2[i]);
 }
 
 function memorize(fn, limit) {
